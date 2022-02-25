@@ -1,0 +1,395 @@
+package controllers.util;
+
+import back.auctions.CurrentAuction;
+
+import javax.swing.*;
+
+public class ComboBoxModels {
+
+    public static DefaultComboBoxModel getAuctionsModel(){
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        model.addElement("All Auctions");
+        model.addElement(CurrentAuction.getAuctionName());
+        model.addElement("Choose Auction");
+        //todo add current auction, and choose auction
+        return model;
+    }
+
+    public static DefaultComboBoxModel getPaymentTypeModel(){
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        model.addElement("Not Sold/Paid");
+        model.addElement("Cash");
+        model.addElement("Credit Card");
+        //WARNING: if the index of 'Check' changes make sure to change the listener on paymentMethodCombo
+        model.addElement("Check");
+        return model;
+    }
+
+    public static DefaultComboBoxModel getTaxRateModel(){
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        model.addElement("N - 0.0");
+        model.addElement("A - " + CurrentAuction.getAuctionTaxRate());
+        model.addElement("B - 0.3");
+        model.addElement("A - 0.0725");
+        model.addElement("A - 0.075");
+        return model;
+    }
+    public static DefaultComboBoxModel getTaxRateModel(float addTaxRate){
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        model.addElement("N - 0.0");
+        model.addElement("A - " + addTaxRate);
+        model.addElement("A - " + CurrentAuction.getAuctionTaxRate());
+        model.addElement("B - 0.3");
+        model.addElement("A - 0.0725");
+        model.addElement("A - 0.075");
+        return model;
+    }
+    public static DefaultComboBoxModel getPremiumModel(){
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        model.addElement("0.00");
+        model.addElement("30.00");
+        return model;
+    }
+    public static DefaultComboBoxModel getPremiumModel(float addPremium){
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        model.addElement("0.00");
+        model.addElement("" + addPremium);
+        model.addElement("30.00");
+        return model;
+    }
+    public static DefaultComboBoxModel getInternetFeeModel(){
+        DefaultComboBoxModel model = new DefaultComboBoxModel();
+        model.addElement("0.00");
+        model.addElement("0.03");
+        return model;
+    }
+
+    public static DefaultComboBoxModel getCountryModel(){
+        DefaultComboBoxModel countryModel = new DefaultComboBoxModel();
+        countryModel.addElement("US");
+        countryModel.addElement("CA");
+        countryModel.addElement("MX");
+
+        countryModel.addElement("AF");
+        countryModel.addElement("AL");
+        countryModel.addElement("DZ");
+        countryModel.addElement("AS");
+        countryModel.addElement("AD");
+        countryModel.addElement("AO");
+        countryModel.addElement("AI");
+        countryModel.addElement("AQ");
+        countryModel.addElement("AG");
+        countryModel.addElement("AR");
+        countryModel.addElement("AM");
+        countryModel.addElement("AW");
+        countryModel.addElement("AU");
+        countryModel.addElement("AT");
+        countryModel.addElement("AZ");
+        countryModel.addElement("BS");
+        countryModel.addElement("BH");
+        countryModel.addElement("BD");
+        countryModel.addElement("BB");
+        countryModel.addElement("BY");
+        countryModel.addElement("BE");
+        countryModel.addElement("BZ");
+        countryModel.addElement("BJ");
+        countryModel.addElement("BM");
+        countryModel.addElement("BT");
+        countryModel.addElement("BO");
+        countryModel.addElement("BA");
+        countryModel.addElement("BW");
+        countryModel.addElement("BV");
+        countryModel.addElement("BR");
+        countryModel.addElement("IO");
+        countryModel.addElement("BN");
+        countryModel.addElement("BG");
+        countryModel.addElement("BF");
+        countryModel.addElement("BI");
+        countryModel.addElement("KH");
+        countryModel.addElement("CM");
+        countryModel.addElement("CV");
+        countryModel.addElement("KY");
+        countryModel.addElement("CF");
+        countryModel.addElement("TD");
+        countryModel.addElement("CL");
+        countryModel.addElement("CN");
+        countryModel.addElement("CX");
+        countryModel.addElement("CC");
+        countryModel.addElement("CO");
+        countryModel.addElement("KM");
+        countryModel.addElement("CG");
+        countryModel.addElement("CD");
+        countryModel.addElement("CK");
+        countryModel.addElement("CR");
+        countryModel.addElement("CI");
+        countryModel.addElement("HR");
+        countryModel.addElement("CU");
+        countryModel.addElement("CY");
+        countryModel.addElement("CZ");
+        countryModel.addElement("DK");
+        countryModel.addElement("DJ");
+        countryModel.addElement("DM");
+        countryModel.addElement("DO");
+        countryModel.addElement("EC");
+        countryModel.addElement("EG");
+        countryModel.addElement("EH");
+        countryModel.addElement("SV");
+        countryModel.addElement("GQ");
+        countryModel.addElement("ER");
+        countryModel.addElement("EE");
+        countryModel.addElement("ET");
+        countryModel.addElement("FK");
+        countryModel.addElement("FO");
+        countryModel.addElement("FJ");
+        countryModel.addElement("FI");
+        countryModel.addElement("FR");
+        countryModel.addElement("GF");
+        countryModel.addElement("PF");
+        countryModel.addElement("TF");
+        countryModel.addElement("GA");
+        countryModel.addElement("GM");
+        countryModel.addElement("GE");
+        countryModel.addElement("DE");
+        countryModel.addElement("GH");
+        countryModel.addElement("GI");
+        countryModel.addElement("GR");
+        countryModel.addElement("GL");
+        countryModel.addElement("GD");
+        countryModel.addElement("GP");
+        countryModel.addElement("GU");
+        countryModel.addElement("GT");
+        countryModel.addElement("GN");
+        countryModel.addElement("GW");
+        countryModel.addElement("GY");
+        countryModel.addElement("HT");
+        countryModel.addElement("HM");
+        countryModel.addElement("HN");
+        countryModel.addElement("HK");
+        countryModel.addElement("HU");
+        countryModel.addElement("IS");
+        countryModel.addElement("IN");
+        countryModel.addElement("ID");
+        countryModel.addElement("IR");
+        countryModel.addElement("IQ");
+        countryModel.addElement("IE");
+        countryModel.addElement("IL");
+        countryModel.addElement("IT");
+        countryModel.addElement("JM");
+        countryModel.addElement("JP");
+        countryModel.addElement("JO");
+        countryModel.addElement("KZ");
+        countryModel.addElement("KE");
+        countryModel.addElement("KI");
+        countryModel.addElement("KP");
+        countryModel.addElement("KR");
+        countryModel.addElement("KW");
+        countryModel.addElement("KG");
+        countryModel.addElement("LA");
+        countryModel.addElement("LV");
+        countryModel.addElement("LB");
+        countryModel.addElement("LS");
+        countryModel.addElement("LR");
+        countryModel.addElement("LY");
+        countryModel.addElement("LI");
+        countryModel.addElement("LT");
+        countryModel.addElement("LU");
+        countryModel.addElement("MO");
+        countryModel.addElement("MK");
+        countryModel.addElement("MG");
+        countryModel.addElement("MW");
+        countryModel.addElement("MY");
+        countryModel.addElement("MV");
+        countryModel.addElement("ML");
+        countryModel.addElement("MT");
+        countryModel.addElement("MH");
+        countryModel.addElement("MQ");
+        countryModel.addElement("MR");
+        countryModel.addElement("MU");
+        countryModel.addElement("YT");
+        countryModel.addElement("FM");
+        countryModel.addElement("MD");
+        countryModel.addElement("MC");
+        countryModel.addElement("MN");
+        countryModel.addElement("MS");
+        countryModel.addElement("MA");
+        countryModel.addElement("MZ");
+        countryModel.addElement("MM");
+        countryModel.addElement("NA");
+        countryModel.addElement("NR");
+        countryModel.addElement("NP");
+        countryModel.addElement("NL");
+        countryModel.addElement("AN");
+        countryModel.addElement("NC");
+        countryModel.addElement("NZ");
+        countryModel.addElement("NI");
+        countryModel.addElement("NE");
+        countryModel.addElement("NG");
+        countryModel.addElement("NU");
+        countryModel.addElement("NF");
+        countryModel.addElement("MP");
+        countryModel.addElement("NO");
+        countryModel.addElement("OM");
+        countryModel.addElement("PK");
+        countryModel.addElement("PW");
+        countryModel.addElement("PS");
+        countryModel.addElement("PA");
+        countryModel.addElement("PG");
+        countryModel.addElement("PY");
+        countryModel.addElement("PE");
+        countryModel.addElement("PH");
+        countryModel.addElement("PN");
+        countryModel.addElement("PL");
+        countryModel.addElement("PT");
+        countryModel.addElement("PR");
+        countryModel.addElement("QA");
+        countryModel.addElement("RE");
+        countryModel.addElement("RO");
+        countryModel.addElement("RU");
+        countryModel.addElement("RW");
+        countryModel.addElement("SH");
+        countryModel.addElement("KN");
+        countryModel.addElement("LC");
+        countryModel.addElement("PM");
+        countryModel.addElement("VC");
+        countryModel.addElement("WS");
+        countryModel.addElement("SM");
+        countryModel.addElement("ST");
+        countryModel.addElement("SA");
+        countryModel.addElement("SN");
+        countryModel.addElement("CS");
+        countryModel.addElement("SC");
+        countryModel.addElement("SL");
+        countryModel.addElement("SG");
+        countryModel.addElement("SK");
+        countryModel.addElement("SI");
+        countryModel.addElement("SB");
+        countryModel.addElement("SO");
+        countryModel.addElement("ZA");
+        countryModel.addElement("GS");
+        countryModel.addElement("ES");
+        countryModel.addElement("LK");
+        countryModel.addElement("SD");
+        countryModel.addElement("SR");
+        countryModel.addElement("SJ");
+        countryModel.addElement("SZ");
+        countryModel.addElement("SE");
+        countryModel.addElement("CH");
+        countryModel.addElement("SY");
+        countryModel.addElement("TW");
+        countryModel.addElement("TJ");
+        countryModel.addElement("TZ");
+        countryModel.addElement("TH");
+        countryModel.addElement("TL");
+        countryModel.addElement("TG");
+        countryModel.addElement("TK");
+        countryModel.addElement("TO");
+        countryModel.addElement("TT");
+        countryModel.addElement("TN");
+        countryModel.addElement("TR");
+        countryModel.addElement("TM");
+        countryModel.addElement("TC");
+        countryModel.addElement("TV");
+        countryModel.addElement("UG");
+        countryModel.addElement("UA");
+        countryModel.addElement("AE");
+        countryModel.addElement("GB");
+        countryModel.addElement("UM");
+        countryModel.addElement("UY");
+        countryModel.addElement("UZ");
+        countryModel.addElement("VE");
+        countryModel.addElement("VU");
+        countryModel.addElement("VN");
+        countryModel.addElement("VG");
+        countryModel.addElement("VI");
+        countryModel.addElement("WF");
+        countryModel.addElement("YE");
+        countryModel.addElement("ZW");
+        return countryModel;
+    }
+
+    public static DefaultComboBoxModel getStateModel(){
+        DefaultComboBoxModel stateModel = new DefaultComboBoxModel();
+        stateModel.addElement("ND");
+        stateModel.addElement("MN");
+        stateModel.addElement("SD");
+        stateModel.addElement("MT");
+        stateModel.addElement("AL");
+        stateModel.addElement("AK");
+        stateModel.addElement("AZ");
+        stateModel.addElement("AR");
+        stateModel.addElement("CA");
+        stateModel.addElement("CO");
+        stateModel.addElement("CT");
+        stateModel.addElement("DE");
+        stateModel.addElement("FL");
+        stateModel.addElement("GA");
+        stateModel.addElement("HI");
+        stateModel.addElement("ID");
+        stateModel.addElement("IL");
+        stateModel.addElement("IN");
+        stateModel.addElement("IA");
+        stateModel.addElement("KS");
+        stateModel.addElement("KY");
+        stateModel.addElement("LA");
+        stateModel.addElement("ME");
+        stateModel.addElement("MD");
+        stateModel.addElement("MA");
+        stateModel.addElement("MI");
+        stateModel.addElement("MN");
+        stateModel.addElement("MS");
+        stateModel.addElement("MO");
+        stateModel.addElement("MT");
+        stateModel.addElement("NE");
+        stateModel.addElement("NV");
+        stateModel.addElement("NH");
+        stateModel.addElement("NJ");
+        stateModel.addElement("NM");
+        stateModel.addElement("NY");
+        stateModel.addElement("NC");
+        stateModel.addElement("ND");
+        stateModel.addElement("OH");
+        stateModel.addElement("OK");
+        stateModel.addElement("OR");
+        stateModel.addElement("PA");
+        stateModel.addElement("RI");
+        stateModel.addElement("SC");
+        stateModel.addElement("SD");
+        stateModel.addElement("TN");
+        stateModel.addElement("TX");
+        stateModel.addElement("UT");
+        stateModel.addElement("VT");
+        stateModel.addElement("VA");
+        stateModel.addElement("WA");
+        stateModel.addElement("WV");
+        stateModel.addElement("WI");
+        stateModel.addElement("WY");
+
+        stateModel.addElement("DC");
+
+        stateModel.addElement("MH");
+        stateModel.addElement("AE");
+        stateModel.addElement("AA");
+        stateModel.addElement("AP");
+
+        return stateModel;
+    }
+
+    public static DefaultComboBoxModel getProvinceModel(){
+        DefaultComboBoxModel provinceModel = new DefaultComboBoxModel();
+
+        provinceModel.addElement("AB");
+        provinceModel.addElement("BC");
+        provinceModel.addElement("MB");
+        provinceModel.addElement("NB");
+        provinceModel.addElement("NL");
+        provinceModel.addElement("NT");
+        provinceModel.addElement("NS");
+        provinceModel.addElement("NU");
+        provinceModel.addElement("ON");
+        provinceModel.addElement("PE");
+        provinceModel.addElement("QC");
+        provinceModel.addElement("SK");
+        provinceModel.addElement("YT");
+        return provinceModel;
+    }
+}
